@@ -1,14 +1,15 @@
-package com.student.utils;
+package com.first.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DbConnectionUtil {
-    private static String driver = "com.mysql.cj.jdbc.Driver";
-    private static String url = "jdbc:mysql://localhost:3306/organizationdatabase";
-    private static String username = "root";
-    private static String password = "LocalHost@123";
+
+	private static String driver="com.mysql.cj.jdbc.Driver";
+	private static String url="jdbc:mysql://localhost:3306/STUDENT";
+	private static String username="root";
+	private static String password="LocalHost@123";
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException  {
 		// 1.... loading the driver
@@ -21,10 +22,4 @@ public class DbConnectionUtil {
 		}
 		return conn;
 	}
-//JDBC Steps	
-//load driver
-//create connection
-//create statement (Statement /prepareStatement)
-//execute query
-//close connection
 }
